@@ -8,6 +8,7 @@ import net.dv8tion.jda.core.JDABuilder;
 import net.dv8tion.jda.core.OnlineStatus;
 import net.dv8tion.jda.core.entities.Game;
 import net.dv8tion.jda.core.entities.Role;
+import net.dv8tion.jda.core.hooks.IEventManager;
 
 public class Bot {
 	public static JDA jda;
@@ -19,7 +20,6 @@ public class Bot {
 		
 		jda.getPresence().setStatus(OnlineStatus.ONLINE);
 		jda.getPresence().setGame(Game.playing("r!help for commands"));
-
 		List<Role> roles = jda.getRoles();
 		for (Role r : roles) {
 			System.out.println(r.getName());
